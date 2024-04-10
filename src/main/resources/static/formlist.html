@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem de Contratos</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <div class="d-flex justify-content-between mb-3">
+        <h1>Listagem de Contratos ShowTime</h1>
+        <div>
+            <a href="index.html" class="btn btn-info">Ver artistas</a>
+            <a href="form.html" class="btn btn-success">Criar contrato</a>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" class="form-control" id="searchInput" placeholder="Pesquisar artista ou banda...">
+    </div>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Contratante</th>
+            <th>Artista</th>
+            <th>Data</th>
+            <th>Preço</th>
+        </tr>
+        </thead>
+        <tbody id="contractsTableBody">
+
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script/listagem_contract_script.js"></script>
+
+</body>
+</html>

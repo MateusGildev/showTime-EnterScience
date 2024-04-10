@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contrato</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4" id="PageTitle">Formulário de Contrato</h1>
+        <form id="contractForm">
+            <div class="form-group">
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" class="form-control" id="username" name="username" autocomplete="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="artistId">Id do artista:</label>
+                <input type="number" class="form-control" id="artistId" name="artistId" autocomplete="off" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="price">Preço:</label>
+                <input type="number" class="form-control" id="price" name="price" step="0.01" autocomplete="off" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="localDate">Data:</label>
+                <input type="date" class="form-control" id="localDate" name="localDate" autocomplete="off" required>
+            </div>
+
+            <div class="container mt-3">
+                <button type="submit" class="btn btn-success" id="submitButton">Enviar Contrato</button>
+            </div>
+        </form>
+        <div class="container mt-3">
+            <a href="formlist.html" class="btn btn-primary">Ir para lista de Contratos</a>
+        </div>
+        <div class="container mt-3">
+            <a href="index.html" class="btn btn-info">Ver Artistas</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script/formScript.js"></script>
+</body>
+</html>
