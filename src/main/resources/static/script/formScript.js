@@ -1,5 +1,5 @@
 $(document).ready(function() {
-            // Função para formatar a data como dd/MM/yyyy
+            // function to format localDate dd/MM/yyyy
             function formatDate(date) {
                 var d = new Date(date),
                     day = '' + d.getDate(),
@@ -12,22 +12,22 @@ $(document).ready(function() {
                 return [day, month, year].join('/');
             }
 
-            // Evento de envio do formulário de contrato
+            // form submit event
             $('#contractForm').submit(function(e) {
                 e.preventDefault(); // Evita o envio padrão do formulário
 
                 var data = {
                     username: $("#username").val(),
                     price: $("#price").val(),
-                    localDate: formatDate($("#localDate").val()), // Formata a data como dd/MM/yyyy
+                    localDate: formatDate($("#localDate").val()),
                     artistId: $("#artistId").val()
                 };
 
                 $.ajax({
                     type: "POST",
                     url: "/contract/new/"+ data.artistId,
-                    data: JSON.stringify(data), // Enviar os dados como JSON
-                    contentType: "application/json", // Definir o tipo de conteúdo como JSON
+                    data: JSON.stringify(data),
+                    contentType: "application/json",
                     success: function(response) {
                         alert("Cadastro realizado com sucesso!");
                         window.location.href = "formlist.html";

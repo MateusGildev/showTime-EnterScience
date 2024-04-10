@@ -13,8 +13,6 @@ $(document).ready(function(){
                         "<td>" + contract.artist.artistName + "</td>" +
                         "<td>" + contract.localDate + "</td>"+
                         "<td>" + "R$" + contract.price + "</td>"+
-                        "<button class='btn btn-primary btn-edit' data-contract-id='" + contract.id + "'>Editar</button>" +
-                        "<button class='btn btn-danger btn-delete' data-contract-id='" + contract.id + "'>Excluir</button>" +
                         "</td>" +
                         "</tr>";
 
@@ -29,9 +27,9 @@ $(document).ready(function(){
     carregarContracts();
 
         $("#searchInput").on("keyup", function() {
-            var value = $(this).val().toLowerCase(); // Obtém o valor do campo de pesquisa em minúsculas
+            var value = $(this).val().toLowerCase();
             $("#contractsTableBody tr").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1); // Mostra/oculta as linhas conforme o filtro
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
             });
         });
     });
