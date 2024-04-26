@@ -38,4 +38,9 @@ public class ContractController {
         return ResponseEntity.ok(contractService.findById(id));
     }
 
+    @DeleteMapping("delete/{id}")
+    public void deleteContractById(@PathVariable Integer id){
+        contractService.deleteById(id);
+    }
+
 }

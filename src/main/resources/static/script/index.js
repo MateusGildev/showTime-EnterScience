@@ -32,7 +32,7 @@ $(document).ready(function(){
         $(document).on("click", ".btn-fazer-contrato", function(){
                 var artistId = $(this).data("artist-id");
                 var artistName = $(this).data("artist-name");
-                alert("Artista selecionado: "+artistName+ "---------- Id do artista: "+artistId)
+                alert("Artista selecionado: "+artistName+ "\n Id do artista: "+artistId)
                 window.location.href = 'form.html?artistId=' + artistId + '&artistName=' + encodeURIComponent(artistName);
             });
 

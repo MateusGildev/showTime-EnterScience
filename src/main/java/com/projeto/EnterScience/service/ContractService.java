@@ -38,4 +38,8 @@ public class ContractService {
     public Optional<Contract> findById(Integer id){
         return contractRepository.findById(Long.valueOf(id));
     }
+
+    public void deleteById(Integer id) {
+        contractRepository.deleteById(Long.valueOf(id));
+    }
 }
